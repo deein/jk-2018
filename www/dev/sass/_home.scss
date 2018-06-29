@@ -1,3 +1,185 @@
+body,html{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
 body{
+	@include display-flex;
+	@include justify-content(center);
 	background: $body-bg;
+	&:after{
+		content:"";
+		position: absolute;
+		width:10px;
+		height:100%;
+		top: 0;
+		left: 0;
+		background: $jk-yellow;
+	}
+	header{
+		position:absolute;
+		z-index:1;
+		nav{
+			@include display-flex;
+			@include align-items(center);
+			@include flex-direction(row);
+			@include justify-content(space-around);
+			.logo{
+				line-height:150px;
+				img{
+					height:30px;
+				}
+			}
+			.navWrapper{
+				line-height:150px;
+				.navButtons{
+					@include display-flex;
+					@include align-items(center);
+					@include flex-direction(column);
+					@include justify-content(space-around);
+					float:right;
+					width: 25px;
+					height: 20px;
+					.dash{
+						width: 25px;
+						height: 2px;
+						background: white;
+					}
+				}
+			}
+		}
+	}
+	.slideWrapper{
+		position: relative;
+		@include display-flex;
+		@include align-items(center);
+		@include justify-content(flex-start);
+		height:100%;
+		.titleWrapper{
+			position: relative;
+			&:after, &:before{
+				content: "";
+				position: absolute;
+				height:3px;
+				width:50px;
+				background: $jk-yellow;
+			}
+			&:after{
+				top: -100px;
+				left: 0;
+			}
+			&:before{
+				bottom: -100px;
+				left: 0;
+			}
+			.title{
+				font-size: 70px;
+				font-weight: bold;
+				line-height: 50px;
+			}
+			.date{
+				font-size: 30px;
+				color: $jk-yellow;
+			}
+		}
+		.buttonsWrapper{
+			position: absolute;
+			bottom: 20%;
+			left: $grid-gutter-width/2;
+			font-size: 20px;
+			line-height: 36px;
+			text-align: center;
+			.icon, .text{
+				@include transition(transform .3s ease);
+			}
+			.icon{
+				position: absolute;
+				top:0;
+				left:0;
+				width:100%;
+				height: 100%;
+				text-align:center;
+				@include translateY(-36px);
+				img{
+					width: 20px;
+					height: 20px;
+				}
+			}
+			.text{
+				position: absolute;
+				width:100%;
+				height: 100%;
+				top:0;
+				left:0;
+			}
+			.buttonWatch{
+				position: relative;
+				width:200px;
+				height: 36px;
+				color: $jk-darkblue;
+				background: $jk-yellow;
+				overflow: hidden;
+				@include transition(background .3s ease);
+				&:hover{
+					background: white;
+					.text{
+						@include translateY(36px);
+					}
+					.icon{
+						@include translateY(0px);
+					}
+				}
+				a{
+				  color: $jk-darkblue;
+				  &:hover{
+				    color: $jk-darkblue;
+				  }
+				}
+			}
+			.buttonTalk{
+				position: relative;
+				width:200px;
+				height: 36px;
+				color: white;
+				overflow: hidden;
+				margin-left: 10px;
+				@include box-shadow(inset 0 0 0 2px white);
+				@include transition(background .3s ease, box-shadow .3s ease);
+				&:hover{
+					@include box-shadow(inset 0 0 0 2px white);
+					.text{
+						@include translateY(36px);
+					}
+					.icon{
+						@include translateY(0px);
+					}
+				}
+				a{
+				  color: white;
+				  &:hover{
+				    color: white;
+				  }
+				}
+			}
+		}
+	}
+	.videoWrapper{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width:100%;
+		height: 100%;
+		z-index:-1;
+		&:after{
+			content:"";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: $jk-darkblue;
+			opacity: .8;
+			z-index:10;
+		}
+	}
 }

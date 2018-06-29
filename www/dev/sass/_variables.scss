@@ -21,15 +21,17 @@ $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
+$jk-yellow:             #ffd934;
+$jk-darkblue:           #0e1721;
 
 //== Scaffolding
 //
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #fff !default;
+$body-bg:               #142231 !default;
 //** Global text color on `<body>`.
-$text-color:            $gray-dark !default;
+$text-color:            white !default;
 
 //** Global textual link color.
 $link-color:            $brand-primary !default;
@@ -43,7 +45,7 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  "proxima-nova", Helvetica, Arial, sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
@@ -352,7 +354,7 @@ $container-desktop:            (940px + $grid-gutter-width) !default;
 $container-md:                 $container-desktop !default;
 
 // Large screen / wide desktop
-$container-large-desktop:      (1140px + $grid-gutter-width) !default;
+$container-large-desktop:      (1500px + $grid-gutter-width) !default;
 //** For `$screen-lg-min` and up.
 $container-lg:                 $container-large-desktop !default;
 
@@ -593,15 +595,15 @@ $label-link-hover-color:      #fff !default;
 //##
 
 //** Padding applied to the modal body
-$modal-inner-padding:         15px !default;
+$modal-inner-padding:         0px !default;
 
 //** Padding applied to the modal title
-$modal-title-padding:         15px !default;
+$modal-title-padding:         0px !default;
 //** Modal title line-height
 $modal-title-line-height:     $line-height-base !default;
 
 //** Background color of modal content area
-$modal-content-bg:                             #fff !default;
+$modal-content-bg:                             transparent !default;
 //** Modal content border color
 $modal-content-border-color:                   rgba(0,0,0,.2) !default;
 //** Modal content border color **for IE8**
@@ -616,7 +618,7 @@ $modal-header-border-color:   #e5e5e5 !default;
 //** Modal footer border color
 $modal-footer-border-color:   $modal-header-border-color !default;
 
-$modal-lg:                    900px !default;
+$modal-lg:                    1280px !default;
 $modal-md:                    600px !default;
 $modal-sm:                    300px !default;
 

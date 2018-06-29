@@ -4,14 +4,64 @@
         <meta charset="utf-8">
         <meta name="description" content="Your first best practice project !">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Best practice project</title>
+        <title>JK . PROD</title>
         <link rel="stylesheet" href="css/main.css">
         <link rel="author" href="humans.txt">
+        <link rel="stylesheet" href="https://use.typekit.net/elg7cpl.css">
     </head>
     <body>
-        <section class="container">
-            <h1>Welcome to your clean best practice !</h1>
+        <header class="container row">
+          <nav>
+            <div class="col-xs-6 logo"><img src="../resources/logo/logo-jkprod.svg" alt=""></div>
+            <div class="col-xs-6 navWrapper">
+              <div class="navButtons">
+                <div class="dash"></div>
+                <div class="dash"></div>
+              </div>
+            </div>
+          </nav>
+        </header>
+
+        <section class="container slideWrapper">
+            <div class="titleWrapper">
+              <div class="title">showreel</div>
+              <div class="date">2018</div>
+            </div>
+            <div class="buttonsWrapper">
+              <div class="buttonWatch pull-left">
+                <a href="#myModal" data-toggle="modal">
+                  <span class="icon"><img src="resources/icon/icon-play.svg" alt=""></span>
+                  <span class="text">watch it</span>
+                </a>
+              </div>
+              <div class="buttonTalk pull-left">
+                  <a href="#">
+                    <span class="icon"><img src="resources/icon/icon-bubble.svg" alt=""></span>
+                    <span class="text">let's talk</span>
+                  </a>
+              </div>
+            </div>
         </section>
+
+        <section class="videoWrapper">
+          <div class="embed-responsive embed-responsive-16by9">
+            <video class="embed-responsive-item" autoplay muted loop <playsinline></playsinline>>
+              <source src="resources/video/showreel.mp4" type="video/mp4">
+            </video>
+          </div>
+        </section>
+
+        <!-- Modal HTML -->
+        <div id="myModal" class="modal fade">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> -->
+                    <div class="modal-body">
+                      <iframe src="https://player.vimeo.com/video/275782868" width="1280" height="720" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script src="js/main.min.js"></script>
     </body>
